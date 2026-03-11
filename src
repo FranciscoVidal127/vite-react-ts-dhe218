@@ -71,4 +71,145 @@ export function YouTubeEmbed({ url, title }: YouTubeEmbedProps) {
     </div>
   );
 }
+type Still = {
+  src: string;
+  alt: string;
+};
+
+type Scene = {
+  title: string;
+  subtitle: string;
+  youtubeUrl: string;
+};
+
+type Filme = {
+  id: number;
+  slug: string;
+  title: string;
+  year: number;
+  country: string;
+  duration: string;
+  role: string;
+  director: string;
+  type: string;
+  genre?: string;
+  status?: string;
+  festivals: string;
+  description: string;
+  image: string;
+  cast: string[];
+  stills: Still[];
+  scenes: Scene[];
+};
+
+type Escrito = {
+  id: number;
+  title: string;
+  category: string;
+  date: string;
+  readTime: string;
+  excerpt: string;
+  slug: string;
+  tags: string[];
+  origem: string;
+};
+
+export const siteData = {
+  hero: {
+    name: "Francisco Vidal",
+    title: "Ator · Cineasta · Tradutor · Escritor de Cinema",
+    bio: "Cinema, atuação e pensamento como prática contínua. Entre a presença diante da câmera, o processo de realização e a escrita crítica.",
+    image: "/images/image-copy-2.png"
+  },
+
+  reel: {
+    videos: [
+      "https://www.youtube.com/watch?v=Ify4U-E4aaE",
+      "https://www.youtube.com/embed/UbjvM_b4o70",
+      "https://www.youtube.com/embed/rzGUuYIckv4",
+      "https://www.youtube.com/watch?v=L3EEwFrGslw"
+    ],
+    description: "Seleção de trabalhos recentes em cinema e televisão."
+  },
+
+  sobre: {
+    text: [
+      "Francisco Vidal é ator e cineasta baseado no Rio de Janeiro. Sua entrada no cinema não começou na frente da câmera, mas por dentro da engrenagem: em 2023, trabalhando com tradução e pós-produção em Canto das Amapolas, dirigido por Paula Gaitán, ele atravessou um portal — não só para um filme, mas para um modo de ver. Ali, o cinema deixou de ser ideia e virou matéria: tempo, montagem, escuta, relação.",
+      "Em 2024, essa passagem se transformou em presença. Francisco estreou como ator em dois longas-metragens: O Inspetor Geral, dirigido por Gregório Gananian e produzido pela Zaum (filmado entre maio e junho de 2024, hoje em pós-produção), e O Mundo dos Mortos, dirigido por Pedro Tavares e produzido por 7 a 1 Filmes e Cavideo, exibido na Mostra Olhos Livres do Festival de Cinema de Tiradentes (2025). Atualmente, acompanha a pós-produção de O Inspetor Geral como assistente de direção, e filmou Acronon (2026), dirigido por Gregório Gananian e estrelado também por Clara Choveaux.",
+      "O que ele procura na atuação é alta presença e escuta: o corpo como membrana — sensível ao outro, ao espaço e ao ritmo de cada realizador. Não como uma identidade fixa, mas como um ator em processo, que usa o ofício como ferramenta de transformação: aprender a chegar, a adaptar, a sustentar o momento.",
+      "2025 foi um divisor de águas. Francisco intensificou a formação em atuação para câmera e repertório em cursos e laboratórios contínuos, aprofundando técnica, precisão e prontidão para o set — e segue em prática permanente no LABO, com Patrick Sampaio, no eixo de \"gravar, assistir e regravar\", como método de refino real do gesto diante da câmera."
+    ],
+    image: "/images/captura_de_tela_de_2026-02-06_18-14-50.png"
+  },
+
+  filmografia: [
+    {
+      id: 1,
+      slug: "o-mundo-dos-mortos",
+      title: "O Mundo dos Mortos",
+      year: 2025,
+      country: "Brasil",
+      duration: "78min",
+      role: "Fábio",
+      director: "Pedro Tavares",
+      type: "Cinema",
+      festivals: "28ª Mostra de Cinema de Tiradentes — Mostra Olhos Livres",
+      description: "No segundo dia após a morte de Cristo, humanos, anjos e demônios questionam o futuro da existência enquanto vagam pela Terra agora abandonada.",
+      image: "/images/mundo-mortos.jpg",
+      cast: [
+        "Estêvão Nogueira",
+        "Morgana Corrêa",
+        "Raquel Monteiro",
+        "Francisco Vidal"
+      ],
+      stills: [
+        { src: "/images/still-1.jpg", alt: "O Mundo dos Mortos - Still 1" },
+        { src: "/images/still-2.jpg", alt: "O Mundo dos Mortos - Still 2" },
+        { src: "/images/still-3.jpg", alt: "O Mundo dos Mortos - Still 3" }
+      ],
+      scenes: [
+        { title: "Cena 01", subtitle: "O Mundo dos Mortos (2025) — Fábio", youtubeUrl: "https://www.youtube.com/watch?v=2x_u4B0Tj1w" },
+        { title: "Cena 04", subtitle: "O Mundo dos Mortos (2025) — Fábio", youtubeUrl: "https://www.youtube.com/watch?v=9TLh-rUE2ZU" },
+        { title: "Cena 05", subtitle: "O Mundo dos Mortos (2025) — Fábio", youtubeUrl: "https://www.youtube.com/watch?v=rzGUuYIckv4" }
+      ]
+    },
+    {
+      id: 2,
+      slug: "inspetor-geral",
+      title: "O Inspetor Geral",
+      year: 2025,
+      country: "Brasil",
+      duration: "",
+      role: "Espectro F.",
+      director: "Gregório Gananian",
+      type: "Cinema",
+      genre: "Longa-metragem, Ficção",
+      status: "Em pós-produção",
+      festivals: "",
+      description: "Adaptação cinematográfica da clássica peça de Nikolai Gogol sobre corrupção e engano na Rússia czarista.",
+      image: "/images/Captura_de_tela_de_2026-02-10_07-41-26.png",
+      cast: ["Clara Choveaux", "Ivon Patrócínio", "Cláudia Ohana", "Francisco Vidal"],
+      stills: [],
+      scenes: []
+    }
+  ] as Filme[],
+
+  fotos: [
+    { id: 1, url: "/images/photoshoot-1.jpg", alt: "Francisco Vidal - Photoshoot" },
+    { id: 2, url: "/images/photoshoot-2.jpg", alt: "Francisco Vidal - Photoshoot" },
+    { id: 3, url: "/images/photoshoot-3.jpg", alt: "Francisco Vidal - Photoshoot" },
+    { id: 4, url: "/images/photoshoot-4.jpg", alt: "Francisco Vidal - Photoshoot" },
+    { id: 5, url: "/images/photoshoot-5.jpg", alt: "Francisco Vidal - Photoshoot" },
+    { id: 6, url: "/images/photoshoot-6jpg", alt: "Francisco Vidal - Photoshoot" }
+  ],
+
+  escritos: [] as Escrito[],
+
+  contato: {
+    email: "franciscovidalcs@gmail.com",
+    instagram: "https://www.instagram.com/franciscovidalcs/"
+  }
+};
+
+export type SiteData = typeof siteData;
 
